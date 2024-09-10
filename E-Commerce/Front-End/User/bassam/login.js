@@ -17,7 +17,6 @@ async function login(event) {
             var result = await response.json();
             localStorage.setItem('jwtToken', result.token);
             localStorage.setItem('userID', result.userID);
-            alert('Logged in successfully');
             clearCartFromLocalStorage(result.userID);
             window.history.back();
         } else {

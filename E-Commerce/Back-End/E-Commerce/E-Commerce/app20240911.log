@@ -1,0 +1,164 @@
+2024-09-11 00:02:44.737 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - null null
+2024-09-11 00:02:44.748 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:44.749 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:44.750 +03:00 [INF] Route matched with {action = "GetOrdersWithProductsByUser", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersWithProductsByUser(Int32) on controller E_Commerce.Controllers.OrderController (E-Commerce).
+2024-09-11 00:02:44.757 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[order_id], [t].[ProductId], [t].[ProductName], [t].[OrderItemId], [t].[product_id]
+FROM [Orders] AS [o]
+LEFT JOIN (
+    SELECT [o0].[product_id] AS [ProductId], [p].[name] AS [ProductName], [o0].[Order_Item_id] AS [OrderItemId], [p].[product_id], [o0].[order_id]
+    FROM [Order_Item] AS [o0]
+    LEFT JOIN [Products] AS [p] ON [o0].[product_id] = [p].[product_id]
+) AS [t] ON [o].[order_id] = [t].[order_id]
+WHERE [o].[user_id] = @__userId_0
+ORDER BY [o].[order_id], [t].[OrderItemId]
+2024-09-11 00:02:44.759 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType8`3[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:44.760 +03:00 [INF] Executed action E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce) in 8.4231ms
+2024-09-11 00:02:44.761 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:44.761 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - 200 null application/json; charset=utf-8 24.6639ms
+2024-09-11 00:02:44.770 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Home/getAllCategories - null null
+2024-09-11 00:02:44.771 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Home/OffSale - null null
+2024-09-11 00:02:44.771 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Home/NewArrival - null null
+2024-09-11 00:02:44.771 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Home/TopSales - null null
+2024-09-11 00:02:44.776 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Home/TopProducts - null null
+2024-09-11 00:02:44.781 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:44.783 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:44.785 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:44.787 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:44.788 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:44.788 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.HomeController.getAllCategories (E-Commerce)'
+2024-09-11 00:02:44.788 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.HomeController.OffSale (E-Commerce)'
+2024-09-11 00:02:44.788 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.HomeController.NewArrival (E-Commerce)'
+2024-09-11 00:02:44.789 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.HomeController.TopSales (E-Commerce)'
+2024-09-11 00:02:44.789 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.HomeController.TopProducts (E-Commerce)'
+2024-09-11 00:02:44.790 +03:00 [INF] Route matched with {action = "getAllCategories", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult getAllCategories() on controller E_Commerce.Controllers.HomeController (E-Commerce).
+2024-09-11 00:02:44.790 +03:00 [INF] Route matched with {action = "OffSale", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult OffSale() on controller E_Commerce.Controllers.HomeController (E-Commerce).
+2024-09-11 00:02:44.790 +03:00 [INF] Route matched with {action = "NewArrival", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NewArrival() on controller E_Commerce.Controllers.HomeController (E-Commerce).
+2024-09-11 00:02:44.791 +03:00 [INF] Route matched with {action = "TopSales", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TopSales() on controller E_Commerce.Controllers.HomeController (E-Commerce).
+2024-09-11 00:02:44.791 +03:00 [INF] Route matched with {action = "TopProducts", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult TopProducts() on controller E_Commerce.Controllers.HomeController (E-Commerce).
+2024-09-11 00:02:44.793 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[category_id], [c].[description], [c].[image], [c].[name]
+FROM [Category] AS [c]
+2024-09-11 00:02:44.797 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[product_id], [p].[category_id], [p].[color], [p].[Date], [p].[description], [p].[flower_color_id], [p].[image], [p].[name], [p].[price], [p].[price_with_discount]
+FROM [Products] AS [p]
+ORDER BY [p].[price_with_discount] DESC
+2024-09-11 00:02:44.798 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[product_id], [p].[category_id], [p].[color], [p].[Date], [p].[description], [p].[flower_color_id], [p].[image], [p].[name], [p].[price], [p].[price_with_discount]
+FROM [Products] AS [p]
+ORDER BY [p].[Date] DESC
+2024-09-11 00:02:44.797 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[E_Commerce.Models.Category, E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:44.798 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[product_id], [p].[category_id], [p].[color], [p].[Date], [p].[description], [p].[flower_color_id], [p].[image], [p].[name], [p].[price], [p].[price_with_discount]
+FROM (
+    SELECT TOP(@__p_0) [o].[product_id] AS [ProductId], COUNT(*) AS [Count]
+    FROM [Order_Item] AS [o]
+    GROUP BY [o].[product_id]
+    ORDER BY COUNT(*) DESC
+) AS [t]
+INNER JOIN [Products] AS [p] ON [t].[ProductId] = [p].[product_id]
+ORDER BY [t].[Count] DESC
+2024-09-11 00:02:44.799 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[E_Commerce.Models.Product, E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:44.800 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[E_Commerce.Models.Product, E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:44.805 +03:00 [INF] Executed action E_Commerce.Controllers.HomeController.OffSale (E-Commerce) in 12.4264ms
+2024-09-11 00:02:44.800 +03:00 [INF] Executed action E_Commerce.Controllers.HomeController.getAllCategories (E-Commerce) in 8.4835ms
+2024-09-11 00:02:44.805 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[E_Commerce.Models.Product, E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:44.803 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[product_id] AS [ProductId], [p].[name] AS [Name], [p].[description] AS [Description], [p].[image] AS [Image], [p].[price] AS [Price], [p].[category_id] AS [CategoryId], [p].[color] AS [Color], [p].[flower_color_id] AS [FlowerColorId], [p].[price_with_discount] AS [PriceWithDiscount], COALESCE((
+    SELECT AVG(CAST([c0].[rating] AS decimal(18,2)))
+    FROM [Comment] AS [c0]
+    WHERE [c0].[product_id] = [p].[product_id]), 0.0) AS [rating], (
+    SELECT COUNT(*)
+    FROM [Comment] AS [c1]
+    WHERE [c1].[product_id] = [p].[product_id]) AS [ReviewCount]
+FROM [Products] AS [p]
+ORDER BY COALESCE((
+    SELECT AVG(CAST([c].[rating] AS decimal(18,2)))
+    FROM [Comment] AS [c]
+    WHERE [c].[product_id] = [p].[product_id]), 0.0) DESC
+2024-09-11 00:02:44.809 +03:00 [INF] Executed action E_Commerce.Controllers.HomeController.NewArrival (E-Commerce) in 15.1977ms
+2024-09-11 00:02:44.810 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.HomeController.OffSale (E-Commerce)'
+2024-09-11 00:02:44.811 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.HomeController.getAllCategories (E-Commerce)'
+2024-09-11 00:02:44.812 +03:00 [INF] Executed action E_Commerce.Controllers.HomeController.TopSales (E-Commerce) in 16.1789ms
+2024-09-11 00:02:44.813 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[E_Commerce.DTOs.RatingDTO, E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:44.813 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.HomeController.NewArrival (E-Commerce)'
+2024-09-11 00:02:44.814 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Home/OffSale - 200 null application/json; charset=utf-8 42.7985ms
+2024-09-11 00:02:44.814 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Home/getAllCategories - 200 null application/json; charset=utf-8 44.0597ms
+2024-09-11 00:02:44.815 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.HomeController.TopSales (E-Commerce)'
+2024-09-11 00:02:44.816 +03:00 [INF] Executed action E_Commerce.Controllers.HomeController.TopProducts (E-Commerce) in 19.1654ms
+2024-09-11 00:02:44.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Home/NewArrival - 200 null application/json; charset=utf-8 45.3362ms
+2024-09-11 00:02:44.820 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Home/TopSales - 200 null application/json; charset=utf-8 48.8495ms
+2024-09-11 00:02:44.820 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.HomeController.TopProducts (E-Commerce)'
+2024-09-11 00:02:44.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Home/TopProducts - 200 null application/json; charset=utf-8 47.3766ms
+2024-09-11 00:02:44.881 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - null null
+2024-09-11 00:02:44.882 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:44.883 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:44.884 +03:00 [INF] Route matched with {action = "GetOrdersWithProductsByUser", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersWithProductsByUser(Int32) on controller E_Commerce.Controllers.OrderController (E-Commerce).
+2024-09-11 00:02:44.886 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[order_id], [t].[ProductId], [t].[ProductName], [t].[OrderItemId], [t].[product_id]
+FROM [Orders] AS [o]
+LEFT JOIN (
+    SELECT [o0].[product_id] AS [ProductId], [p].[name] AS [ProductName], [o0].[Order_Item_id] AS [OrderItemId], [p].[product_id], [o0].[order_id]
+    FROM [Order_Item] AS [o0]
+    LEFT JOIN [Products] AS [p] ON [o0].[product_id] = [p].[product_id]
+) AS [t] ON [o].[order_id] = [t].[order_id]
+WHERE [o].[user_id] = @__userId_0
+ORDER BY [o].[order_id], [t].[OrderItemId]
+2024-09-11 00:02:44.888 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType8`3[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:44.888 +03:00 [INF] Executed action E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce) in 3.7762ms
+2024-09-11 00:02:44.889 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:44.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - 200 null application/json; charset=utf-8 9.2918ms
+2024-09-11 00:02:45.142 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - null null
+2024-09-11 00:02:45.144 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:45.145 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:45.153 +03:00 [INF] Route matched with {action = "GetOrdersWithProductsByUser", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersWithProductsByUser(Int32) on controller E_Commerce.Controllers.OrderController (E-Commerce).
+2024-09-11 00:02:45.156 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[order_id], [t].[ProductId], [t].[ProductName], [t].[OrderItemId], [t].[product_id]
+FROM [Orders] AS [o]
+LEFT JOIN (
+    SELECT [o0].[product_id] AS [ProductId], [p].[name] AS [ProductName], [o0].[Order_Item_id] AS [OrderItemId], [p].[product_id], [o0].[order_id]
+    FROM [Order_Item] AS [o0]
+    LEFT JOIN [Products] AS [p] ON [o0].[product_id] = [p].[product_id]
+) AS [t] ON [o].[order_id] = [t].[order_id]
+WHERE [o].[user_id] = @__userId_0
+ORDER BY [o].[order_id], [t].[OrderItemId]
+2024-09-11 00:02:45.157 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType8`3[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:45.158 +03:00 [INF] Executed action E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce) in 3.4986ms
+2024-09-11 00:02:45.159 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:45.159 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - 200 null application/json; charset=utf-8 17.4962ms
+2024-09-11 00:02:45.402 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - null null
+2024-09-11 00:02:45.405 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:45.406 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:45.407 +03:00 [INF] Route matched with {action = "GetOrdersWithProductsByUser", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersWithProductsByUser(Int32) on controller E_Commerce.Controllers.OrderController (E-Commerce).
+2024-09-11 00:02:45.409 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[order_id], [t].[ProductId], [t].[ProductName], [t].[OrderItemId], [t].[product_id]
+FROM [Orders] AS [o]
+LEFT JOIN (
+    SELECT [o0].[product_id] AS [ProductId], [p].[name] AS [ProductName], [o0].[Order_Item_id] AS [OrderItemId], [p].[product_id], [o0].[order_id]
+    FROM [Order_Item] AS [o0]
+    LEFT JOIN [Products] AS [p] ON [o0].[product_id] = [p].[product_id]
+) AS [t] ON [o].[order_id] = [t].[order_id]
+WHERE [o].[user_id] = @__userId_0
+ORDER BY [o].[order_id], [t].[OrderItemId]
+2024-09-11 00:02:45.411 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType8`3[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:45.412 +03:00 [INF] Executed action E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce) in 3.946ms
+2024-09-11 00:02:45.413 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:45.414 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - 200 null application/json; charset=utf-8 12.1979ms
+2024-09-11 00:02:45.603 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - null null
+2024-09-11 00:02:45.606 +03:00 [INF] CORS policy execution successful.
+2024-09-11 00:02:45.607 +03:00 [INF] Executing endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:45.608 +03:00 [INF] Route matched with {action = "GetOrdersWithProductsByUser", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetOrdersWithProductsByUser(Int32) on controller E_Commerce.Controllers.OrderController (E-Commerce).
+2024-09-11 00:02:45.611 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[order_id], [t].[ProductId], [t].[ProductName], [t].[OrderItemId], [t].[product_id]
+FROM [Orders] AS [o]
+LEFT JOIN (
+    SELECT [o0].[product_id] AS [ProductId], [p].[name] AS [ProductName], [o0].[Order_Item_id] AS [OrderItemId], [p].[product_id], [o0].[order_id]
+    FROM [Order_Item] AS [o0]
+    LEFT JOIN [Products] AS [p] ON [o0].[product_id] = [p].[product_id]
+) AS [t] ON [o].[order_id] = [t].[order_id]
+WHERE [o].[user_id] = @__userId_0
+ORDER BY [o].[order_id], [t].[OrderItemId]
+2024-09-11 00:02:45.612 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType8`3[[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], E-Commerce, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-11 00:02:45.613 +03:00 [INF] Executed action E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce) in 4.0687ms
+2024-09-11 00:02:45.614 +03:00 [INF] Executed endpoint 'E_Commerce.Controllers.OrderController.GetOrdersWithProductsByUser (E-Commerce)'
+2024-09-11 00:02:45.615 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7000/api/Order/GetOrdersWithProductsByUser/21 - 200 null application/json; charset=utf-8 11.3794ms

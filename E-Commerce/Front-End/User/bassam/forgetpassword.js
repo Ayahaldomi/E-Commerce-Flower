@@ -18,7 +18,7 @@ async function sendemail(event) {
         // Check if the request was successful
         if (response.ok) {
             var result = await response.json();
-            alert("Verification code sent successfully! OTP: " + result.otp);
+            alert("Verification code sent successfully! OTP");
             localStorage.setItem("varificationId",result.userId);
             window.location.href="OTP.html";
         } else {

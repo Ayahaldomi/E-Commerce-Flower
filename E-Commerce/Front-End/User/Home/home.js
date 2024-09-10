@@ -24,6 +24,8 @@ Categories();
 
 
 
+  
+
 
 function catigoryID(data){
     localStorage.setItem("categoryID", data);
@@ -120,8 +122,9 @@ async function NewArrival() {
         ]
     });
 }
-
 NewArrival();
+
+
 
 async function TopSales() {
     ;

@@ -63,7 +63,7 @@ async function GetCartItems(userId) {
                     <button onclick="removeCartItemNAVCART(${item.userId}, ${item.productId})">x</button>
                 </td>
                 <td class="cart-product-image">
-                    <a href="product-details.html"><img src="${item.prodcutDTO.image}" alt="${item.prodcutDTO.name}"></a>
+                    <a href="product-details.html"><img src="../../../Back-End/E-Commerce/E-Commerce/Images/${item.prodcutDTO.image}" alt="${item.prodcutDTO.name}"></a>
                 </td>
                 <td class="cart-product-info">
                     <h4><a href="product-details.html">${item.prodcutDTO.name}</a></h4>
@@ -167,6 +167,7 @@ async function removeCartItemNAVCART(userId, productId) {
     } catch (error) {
         console.error("Error removing cart item:", error);
     }
+    location.reload();
 }
 
 // Call the function to load the cart items (assuming a static userId, replace it dynamically)
@@ -195,7 +196,7 @@ function GetCartItemslocal(){
                     <button onclick="removeCartItemLocal( ${element.productId})">x</button>
                 </td>
                 <td class="cart-product-image">
-                    <a href="product-details.html"><img src="${element.image}" alt="${element.name}"></a>
+                    <a href="product-details.html"><img src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="${element.name}"></a>
                 </td>
                 <td class="cart-product-info">
                     <h4><a href="product-details.html">${element.name}</a></h4>

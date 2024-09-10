@@ -140,9 +140,11 @@ async function GetCartItemsNAVCART(userId) {
         if (!response.length) {
             console.error("No cart items found.");
             alert("No cart items found.");
-
+            document.getElementById("countofcart").innerText = 0; // Set count to 0 if no items are found
             return;
         }
+        let uniqueItemCount = response.length; // The number of unique items (products)
+
 
         const cartItemsContainer = document.getElementById("miniCart");
         cartItemsContainer.innerHTML = ""; // Clear any existing content
@@ -175,6 +177,7 @@ async function GetCartItemsNAVCART(userId) {
         document.getElementById("subtotalMINICART2").innerText = `$${cartSubtotal.toFixed(2)}`;
 
         // document.getElementById("order-total").innerText = `$${(cartSubtotal + 15).toFixed(2)}`; // Assuming $15 shipping fee
+        document.getElementById("countofcart").innerText = uniqueItemCount;
 
     } catch (error) {
         console.error("Error fetching cart items:", error);
@@ -264,17 +267,23 @@ async function removeCartItemVANCART(userId, productId) {
 }
 
 // Call the function to load the cart items (assuming a static userId, replace it dynamically)
-GetCartItemsNAVCART(userID);  // Replace with dynamic userId if needed
 
 
 function GetCartItemslocalNAVCART(){
     var existingCart = localStorage.getItem("cart");
+    if (!existingCart) {
+        // If the cart is empty or doesn't exist, show 0 items and return
+        document.getElementById("countofcart").innerText = 0;
+        return;
+    }
         var cart = JSON.parse(existingCart);
 
         const cartItemsContainer = document.getElementById("miniCart");
         cartItemsContainer.innerHTML = ""; // Clear any existing content
-
+debugger;
         let cartSubtotal = 0;
+        let uniqueItemCount = cart.length; // The number of unique items (products)
+
 
         cart.forEach((element, index) => {
             let itemPrice = element.price;
@@ -301,7 +310,8 @@ function GetCartItemslocalNAVCART(){
         document.getElementById("subtotalMINICART").innerText = `$${cartSubtotal.toFixed(2)}`;
         // document.getElementById("order-total").innerText = `$${(cartSubtotal + 15).toFixed(2)}`; // Assuming $15 shipping fee
 
-       
+           // Update the item count in the countofcart div with the number of unique items
+    document.getElementById("countofcart").innerText = uniqueItemCount;
 }
 
 
@@ -391,5 +401,8 @@ function navbarLogedORnot() {
     }
 }
 
-// Run the function to check the login state
-navbarLogedORnot();
+document.addEventListener("DOMContentLoaded", function() {
+    navbarLogedORnot();
+    GetCartItemsNAVCART(userID);  // Replace with dynamic userId if needed
+
+});

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "epZynW3Tyjs=",
+  "dgSpecHash": "evZfYVT2UXg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
+  "projectFilePath": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orange\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Orange\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

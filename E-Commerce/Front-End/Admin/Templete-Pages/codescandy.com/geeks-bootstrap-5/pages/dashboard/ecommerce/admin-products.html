@@ -227,7 +227,7 @@
                     products.forEach(product => {
                         const productHTML = `
                             <tr>
-                                <td><img src="https://localhost:7000${product.image}" alt="${product.name}" style="width: 50px; height: auto;"> ${product.name}</td>
+                                <td><img src="../../../../../../../../Back-End/E-Commerce/E-Commerce/Images/${product.image}" alt="${product.name}" style="width: 50px; height: auto;"> ${product.name}</td>
                                 <td>$${product.price}</td>
                                 <td>$${product.priceWithDiscount}</td>
                                 <td>${categoriesMap[product.categoryId] || 'N/A'}</td>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j//OYkGsVYYpA/5Zxh5DD20eL0ImTkoAJRiZTbnOTwE=",
+  "Hash": "iwZ+gKDdq+qNNgMQ9gM4VtMP3DU+qxBpnYQpyNrd2tI=",
   "Source": "E-Commerce",
   "BasePath": "_content/E-Commerce",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "E-Commerce\\wwwroot",
       "Source": "E-Commerce",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\1.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\1.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/1.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\1.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\12.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\12.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/12.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\12.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\156018fe-91d2-43db-8d7f-71ea05575a51.jpg",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\156018fe-91d2-43db-8d7f-71ea05575a51.jpg",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/156018fe-91d2-43db-8d7f-71ea05575a51.jpg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\156018fe-91d2-43db-8d7f-71ea05575a51.jpg"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\18e3b78a-c0e1-4959-9082-f2170380870c.jpg",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\18e3b78a-c0e1-4959-9082-f2170380870c.jpg",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/18e3b78a-c0e1-4959-9082-f2170380870c.jpg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\18e3b78a-c0e1-4959-9082-f2170380870c.jpg"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\2.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\2.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/2.png",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\2.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\3.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\3.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/3.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\3.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\4 (1).png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\4 (1).png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/4 (1).png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\4 (1).png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\4.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\4.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/4.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\4.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\5.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\5.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/5.png",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\5.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\52d65652-80c4-4720-9364-c4bd2e9b0c96.jpg",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\52d65652-80c4-4720-9364-c4bd2e9b0c96.jpg",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/52d65652-80c4-4720-9364-c4bd2e9b0c96.jpg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\52d65652-80c4-4720-9364-c4bd2e9b0c96.jpg"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\6.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\6.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/6.png",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\6.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\7.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\7.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/7.png",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\7.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\8.png",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\8.png",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/8.png",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\8.png"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\a1abe3c5-3f70-49f6-9f84-1d7198a890f3.jpg",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\a1abe3c5-3f70-49f6-9f84-1d7198a890f3.jpg",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/a1abe3c5-3f70-49f6-9f84-1d7198a890f3.jpg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\a1abe3c5-3f70-49f6-9f84-1d7198a890f3.jpg"
     },
     {
-      "Identity": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\b56fddf3-fc32-41da-a5c6-606f6d3fd17d.jpg",
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\b56fddf3-fc32-41da-a5c6-606f6d3fd17d.jpg",
       "SourceId": "E-Commerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Orange\\Desktop\\E-CommerceFlowres\\E-commerce\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
       "BasePath": "_content/E-Commerce",
       "RelativePath": "uploads/images/b56fddf3-fc32-41da-a5c6-606f6d3fd17d.jpg",
       "AssetKind": "All",

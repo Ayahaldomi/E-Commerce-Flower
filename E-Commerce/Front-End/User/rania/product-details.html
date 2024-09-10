@@ -919,7 +919,7 @@ input#commentName {
                                 </div>
                             </li>
                             <li>
-                                <a href="#" class="theme-btn-1 btn btn-effect-1 d-add-to-cart" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal" onclick="addToCart(${product.productId}, '${product.name}', ${product.priceWithDiscount}, '${product.image}')">
+                                <a href="#" class="theme-btn-1 btn btn-effect-1 d-add-to-cart" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal" onclick="addToCart(${product.productId}, '${product.name}', ${product.price}, '${product.image}')">
                                     <span>ADD TO CART</span>
                                 </a>
                             </li>
@@ -1037,6 +1037,7 @@ function fetchComments(productId) {
 
     function postComment(productId) {
         var userID = localStorage.getItem('userID');
+        debugger;
     const commentData = {
         UserId: userID, // Assuming static user ID
         UserName: document.getElementById('commentName').value,

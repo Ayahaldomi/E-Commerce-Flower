@@ -86,14 +86,24 @@ else if (pointsvalue >50) {
 
     pointsValue.style.color = "green";
 }
-else {
+else if(pointsvalue == null){
    document.getElementById("orderTotal").textContent = `$${(orderTotal.toFixed(2) - 0 - wheelPrize ).toFixed(2)}`;
 
     document.getElementById("orderTotalHidden").value = `${(orderTotal.toFixed(2)- 0 - wheelPrize ).toFixed(2)}`;
 
  
 
-    pointsValue.innerHTML = `Your Total Points are: ${pointsvalue}. You got $0 off your order!`
+    pointsValue.innerHTML = `Your Total Points are: 0. You got $0 off your order!`
+
+    pointsValue.style.color = "black";
+}else{
+    document.getElementById("orderTotal").textContent = `$${(orderTotal.toFixed(2) - 0 - wheelPrize ).toFixed(2)}`;
+
+    document.getElementById("orderTotalHidden").value = `${(orderTotal.toFixed(2)- 0 - wheelPrize ).toFixed(2)}`;
+
+ 
+
+    pointsValue.innerHTML = `Your Total Points are: 0. You got $0 off your order!`
 
     pointsValue.style.color = "black";
 }

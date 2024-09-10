@@ -27,9 +27,12 @@ async function CreatePassword(event) {
             method: "POST",
             body: formData,
         });
+        var dataUser= await response.json();
+        localStorage.setItem("userID",dataUser.userId);
 
         if (response.ok) {
             window.location.href = "../Home/index.html";
+            
             alert('Password changed successfully');
         } else {
             const errorData = await response.json();
