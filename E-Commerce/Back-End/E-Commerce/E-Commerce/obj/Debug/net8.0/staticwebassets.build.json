@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iwZ+gKDdq+qNNgMQ9gM4VtMP3DU+qxBpnYQpyNrd2tI=",
+  "Hash": "alzWBbI3mI/pLUKhHmeCY7RTA5zurg4zlJUu0ww8iuU=",
   "Source": "E-Commerce",
   "BasePath": "_content/E-Commerce",
   "Mode": "Default",
@@ -300,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\images\\b56fddf3-fc32-41da-a5c6-606f6d3fd17d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\uploads\\images\\Single Bloom.png",
+      "SourceId": "E-Commerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Orange\\Desktop\\copy\\E-Commerce-Flower\\E-Commerce\\Back-End\\E-Commerce\\E-Commerce\\wwwroot\\",
+      "BasePath": "_content/E-Commerce",
+      "RelativePath": "uploads/images/Single Bloom.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\Single Bloom.png"
     }
   ]
 }

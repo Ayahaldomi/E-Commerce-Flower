@@ -67,7 +67,7 @@ namespace E_Commerce.Controllers
             // Retrieve roles and generate JWT token
             var token = _tokenGenerator.GenerateToken(user.Name);
 
-            return Ok(new { Token = token, userID = user.UserId });
+            return Ok(new { Token = token, userID = user.UserId, userName = user.Name });
         }
         [HttpPost("Google")]
         public IActionResult RegisterationFromGoogle([FromForm] RegisterGoogleDTO model)
@@ -201,5 +201,83 @@ namespace E_Commerce.Controllers
 
             return Ok(new { Token = token, userID = user.AdminId });
         }
+        [HttpPost("SendMessage")]
+        public IActionResult SendMessage([FromForm] DTOsSendMessage model)
+        {
+            var chatMessage = new ChatMessage
+            {
+                SenderId = model.SenderId,
+                SenderName = model.SenderName,
+                ReceiverId = model.ReceiverId,
+                ReceiverName = model.ReceiverName,
+                Message = model.Message,
+                Timestamp = DateTime.Now
+            };
+
+            _db.ChatMessages.Add(chatMessage);
+            _db.SaveChanges();
+
+            return Ok(new { success = true });
+        }
+
+        [HttpPost("GetMessages")]
+        public IActionResult GetMessages([FromForm] DTOsFetchMessages model)
+        {
+            var messages = _db.ChatMessages
+                .Where(m => (m.SenderId == model.SenderId || m.ReceiverId == model.ReceiverId) || m.SenderId == model.ReceiverId)
+                .OrderBy(m => m.Timestamp)
+                .ToList();
+
+            return Ok(messages);
+        }
+        [HttpGet("GetRooms")]
+        public IActionResult GetRooms()
+        {
+            // Fetch rooms and order by the timestamp of the latest message
+            var rooms = _db.ChatMessages
+                            .Where(c => c.SenderName != "Admin") // Filter messages
+                            .GroupBy(c => c.SenderName) // Group by SenderName
+                            .Select(g => new
+                            {
+                                RoomName = g.Key,
+                                LastMessageTime = g.Max(c => c.Timestamp) // Get the most recent message time for each room
+                            })
+                            .OrderByDescending(r => r.LastMessageTime) // Order rooms by the most recent message time, descending
+                            .Select(r => r.RoomName) // Select only the room names
+                            .ToList(); // Convert to List
+
+            return Ok(rooms);
+        }
+        [HttpPost("GetMessagesAdmin")]
+        public IActionResult GetMessagesAdmin([FromForm] string Name)
+        {
+            var messages = _db.ChatMessages
+                .Where(m => (m.SenderName == Name) || (m.ReceiverName == Name))
+                .OrderBy(m => m.Timestamp)
+                .ToList();
+
+            return Ok(messages);
+        }
+        [HttpPost("SendMessageAdmin")]
+        public IActionResult SendMessageAdmin([FromForm] DTOsSendMessageAdmin model)
+        {
+
+            var senderId = _db.ChatMessages.Where(x => x.SenderName == model.ReceiverName).FirstOrDefault().SenderId;
+            var chatMessage = new ChatMessage
+            {
+                SenderId = 0,
+                SenderName = "Admin",
+                ReceiverId = senderId,
+                ReceiverName = model.ReceiverName,
+                Message = model.Message,
+                Timestamp = DateTime.Now
+            };
+
+            _db.ChatMessages.Add(chatMessage);
+            _db.SaveChanges();
+
+            return Ok(new { success = true });
+        }
+
     }
 }

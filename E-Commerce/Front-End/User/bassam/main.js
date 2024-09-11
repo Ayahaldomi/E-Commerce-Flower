@@ -61,6 +61,7 @@ if (googleLogin) {
             console.error('Error:', error);
             alert('An error occurred while registering. Please try again.');
         }
+        localStorage.setItem("NameForChat",user.displayName);
         
     
         

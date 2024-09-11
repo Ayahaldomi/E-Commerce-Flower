@@ -27,7 +27,7 @@ function logoutUser() {
 
 // Function to load all cart items by user ID
 async function GetCartItems(userId) {
-    ;
+    
     if(userId == null) {
         GetCartItemslocal();
         
@@ -89,6 +89,7 @@ async function GetCartItems(userId) {
         console.error("Error fetching cart items:", error);
     }
 }
+
 }
 
 // Function to handle checkout, ensuring the user is logged in

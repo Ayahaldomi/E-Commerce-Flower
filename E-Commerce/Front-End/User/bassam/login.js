@@ -17,6 +17,7 @@ async function login(event) {
             var result = await response.json();
             localStorage.setItem('jwtToken', result.token);
             localStorage.setItem('userID', result.userID);
+            localStorage.setItem("NameForChat",result.userName);
             clearCartFromLocalStorage(result.userID);
             window.history.back();
         } else {
@@ -30,10 +31,11 @@ async function login(event) {
 }
 
 async function clearCartFromLocalStorage(userID){
-    ;
+    debugger;
     var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     
     cartItems.forEach(async element => {
+        debugger;
         var requist = await fetch('https://localhost:7000/api/Cart/CreateNewCartItem', {
             method: 'POST',
             headers: {
