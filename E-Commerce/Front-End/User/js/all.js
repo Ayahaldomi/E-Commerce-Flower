@@ -280,7 +280,6 @@ function GetCartItemslocalNAVCART(){
 
         const cartItemsContainer = document.getElementById("miniCart");
         cartItemsContainer.innerHTML = ""; // Clear any existing content
-debugger;
         let cartSubtotal = 0;
         let uniqueItemCount = cart.length; // The number of unique items (products)
 
@@ -371,7 +370,6 @@ function removeCartItemLocalNAV(productId) {
 
 
 function navbarLogedORnot() {
-    debugger;
     var navbarLogedORnot = document.getElementById("navbarLogedORnot");
 
     if (userID == null) {

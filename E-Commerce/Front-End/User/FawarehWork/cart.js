@@ -13,7 +13,12 @@
 // // Access the userId
 // const userID = JSON.parse(storedData);
 
-
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+        // Reload the page to fetch new data
+        window.location.reload();
+    }
+});
 
 // Check if the user is logged in by checking the presence of the token
 function isUserLoggedIn() {
@@ -24,6 +29,7 @@ function isUserLoggedIn() {
 function logoutUser() {
     localStorage.removeItem('userID'); // Remove token from localStorage
 }
+
 
 // Function to load all cart items by user ID
 async function GetCartItems(userId) {
@@ -91,6 +97,9 @@ async function GetCartItems(userId) {
 }
 
 }
+GetCartItems(userID);  // Replace with dynamic userId if needed
+
+
 
 // Function to handle checkout, ensuring the user is logged in
 function proceedToCheckout() {
@@ -172,7 +181,6 @@ async function removeCartItemNAVCART(userId, productId) {
 }
 
 // Call the function to load the cart items (assuming a static userId, replace it dynamically)
-GetCartItems(userID);  // Replace with dynamic userId if needed
 
 
 function GetCartItemslocal(){

@@ -355,31 +355,16 @@
                 <div class="ltn__shop-options">
                     <ul>
                         <li>
-                           <div class="showing-product-number text-right">
-                                <span>Showing 9 of 20 results</span>
-                            </div> 
-                        </li>
-                        <li>
-                           <div class="short-by text-center">
-                                <select class="nice-select">
-                                    <option>Default sorting</option>
-                                    <option>Sort by popularity</option>
-                                    <option>Sort by new arrivals</option>
-                                    <option>Sort by price: low to high</option>
-                                    <option>Sort by price: high to low</option>
-                                </select>
-                            </div>
                             <div class="ltn__grid-list-tab-menu ">
                                 <div class="nav">
-                                    <a class="active show" data-bs-toggle="tab" href="#liton_product_grid"><i class="icon-grid"></i></a>
-                                    <a data-bs-toggle="tab" href="#liton_product_list"><i class="icon-menu"></i></a>
+                                    <a class="active show" data-bs-toggle="tab" href="#liton_product_grid" onclick="fetchProducts(true)"><i class="icon-grid"></i></a>
+                                    <a data-bs-toggle="tab" href="#liton_product_list" onclick="fetchProducts(false)"><i class="icon-menu"></i></a>
                                 </div>
                             </div> 
                         </li>
                     </ul>
                 </div>
-
-
+                
                 <div class="tab-content">
                     <div class="tab-pane fade active show" id="liton_product_grid">
                         <div class="ltn__product-tab-content-inner ltn__product-grid-view">
@@ -388,23 +373,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane fade" id="liton_product_list">
+                        <div class="ltn__product-tab-content-inner ltn__product-list-view">
+                            <div class="row" id="productList">
+                                <!-- Dynamic product items will be inserted here in list view -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-
-
-
-
                 <div class="ltn__pagination-area text-center">
-                    <div class="ltn__pagination ltn__pagination-2">
-                        <ul>
-                            <li><a href="#"><i class="icon-arrow-left"></i></a></li>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#"><i class="icon-arrow-right"></i></a></li>
-                        </ul>
-                    </div>
+                   
                 </div>
             </div>
             <div class="col-lg-3  mb-100">
@@ -1380,7 +1359,7 @@ function storeproductid(productId) {
                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="product-item" style="text-align: center;">
                                         <a href="product-details.html" onclick="storeproductid(${product.productId})">
-                                            <img src="${imageUrl}" alt="${product.name}" style="width: 100%; height: auto; max-height: 300px;">
+                                            <img style="height: 350px; object-fit: cover; src="${imageUrl}" alt="${product.name}" style="width: 100%; height: auto; max-height: 300px;">
                                         </a>
                                         <h2 class="product-title"><a href="product-details.html" onclick="storeproductid(${product.productId})">${product.name}</a></h2>
                                         <p>${priceHtml}</p>
@@ -1412,8 +1391,73 @@ function storeproductid(productId) {
         });
     });
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
+    <script>
+        // Function to fetch products and update UI accordingly
+        function fetchProducts(isGridView) {
+            // API endpoint (adjust this to your actual API endpoint)
+            const apiUrl = 'https://localhost:7000/api/products';
+        
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(products => {
+                    displayProducts(products, isGridView);
+                })
+                .catch(error => console.error('Error fetching products:', error));
+        }
+        function displayProducts(products, isGridView) {
+    const container = isGridView ? document.getElementById('productGrid') : document.getElementById('productList');
     
+    container.innerHTML = ''; // Clear previous contents
+
+    products.forEach(product => {
+        const colDiv = document.createElement('div');
+        const imageUrl = product.image ? `../../../Back-End/E-Commerce/E-Commerce/Images/${product.image}` : 'path/to/default/image.jpg';
+        colDiv.className = isGridView ? 'col-md-4' : 'col-12';
+        if (product.priceWithDiscount && product.priceWithDiscount < product.price) {
+                            priceHtml = `<span style="text-decoration: line-through;">$${product.price}</span> <span style="color: red;">$${product.priceWithDiscount}</span>`;
+                        }
+
+        // Adjust the maximum width of the column and add some margin for spacing
+        colDiv.style.maxWidth = '600px'; // Smaller width for better fit
+        colDiv.style.margin = '10px auto'; // Centers the column and adds vertical space
+
+        colDiv.innerHTML = `
+            <div class="card mb-3" style="width: 100%; height: auto;">
+                <img src="${imageUrl}" style="width: 100%; height: 300px; object-fit: cover;" alt="Product Image" />
+                <div class="card-body">
+                   <h5 class="card-text"><a href="product-details.html" onclick="storeproductid(${product.productId})" class="product-link" data-id="${product.productId}">${product.name}</a></h5>
+                    <p class="card-text">${product.description}</p>
+                    <p class="card-text">${ priceHtml}</p>
+                </div>
+            </div>
+        `;
+        container.appendChild(colDiv);
+    });
+}
+
+// Initial fetch for grid view
+fetchProducts(true);
+
+
+        
+       
+        </script>
 
 </body>
 
