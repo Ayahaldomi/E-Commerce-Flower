@@ -30,9 +30,11 @@ async function CreatePassword(event) {
         var dataUser= await response.json();
         localStorage.setItem("userID",dataUser.userId);
 
+
         if (response.ok) {
             window.location.href = "../Home/index.html";
-            
+             clearCartFromLocalStorage(dataUser.userID);
+
             alert('Password changed successfully');
         } else {
             const errorData = await response.json();
@@ -42,4 +44,30 @@ async function CreatePassword(event) {
         console.error('Error:', error);
         alert('An error occurred while changing the password. Please try again.');
     }
+}
+
+async function clearCartFromLocalStorage(userID){
+    debugger;
+    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    cartItems.forEach(async element => {
+        debugger;
+        var requist = await fetch('https://localhost:7000/api/Cart/CreateNewCartItem', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                productId: element.productId,
+                userId: userID,
+                quantity: element.quantity
+    
+            })
+        });
+        
+    });
+
+    localStorage.removeItem('cart');
+
+ 
 }

@@ -75,7 +75,7 @@
                 <!-- Nav item User -->
 
                 <li class="nav-item">
-                    <a class="nav-link " href="#">
+                    <a class="nav-link " href="Users.html">
                         <i class="fas fa-user" style="font-size:24px"></i>
                         </i> User
                     </a>
@@ -608,6 +608,8 @@
         formData.append("amount", document.getElementById('discountAmount').value);
         formData.append("date", document.getElementById('expirationDate').value);
 
+        formData.append("status", 1);
+
         
 
         try {
@@ -648,7 +650,6 @@
             let rows = ''; // Initialize a string to store rows
 
             data.forEach((Coupon) => {
-                
                 let statusText = Coupon.status == null ? "Pending" : "Active"; // Display appropriate status text
                 let statusClass = Coupon.status == null ? "text-warning" : "text-success"; // Choose CSS class based on status
 
@@ -662,7 +663,6 @@
                   
                   <td>
                     <button class="btn btn-danger btn-sm"  onclick= "DeleteCoupon(${Coupon.coponId})">Delete</button>
-                        <button class="btn btn-success btn-sm" onclick="ActivateCoupon(${Coupon.coponId})">Activate</button>
 
                     
                     
@@ -672,8 +672,7 @@
             });
 
             tableBody.innerHTML = rows;
-
-            
+                     
 
 
 
@@ -723,7 +722,6 @@ async function ActivateCoupon(coponId) {
             console.error('Error:', errorData);
             alert('Failed to activate coupon.');
         }
-        location.reload();
     
 }
 

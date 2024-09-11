@@ -98,7 +98,7 @@ namespace E_Commerce.Controllers
                 // Retrieve roles and generate JWT token
                 var token = _tokenGenerator.GenerateToken(user.Name);
 
-                return Ok(new { Token = token, userID = user.UserId });
+                return Ok(new { Token = token, userID = user.UserId, userName = user.Name });
             }
 
         }

@@ -3,7 +3,7 @@ using E_Commerce.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace E_Commerce.Controllers
+namespace E_Commerce.Controllers.Esraa
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -46,7 +46,7 @@ namespace E_Commerce.Controllers
                 Name = couponDto.Name,
                 Amount = couponDto.Amount,
                 Date = couponDto.Date,
-
+                Status = couponDto.Status,
 
             };
 

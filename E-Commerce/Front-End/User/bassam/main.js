@@ -39,17 +39,25 @@ if (googleLogin) {
         formData.append('photoURL', user.photoURL);
         
         try {
+          debugger;
             var response = await fetch(url, {
                 method: "POST",
                 body: formData,
             });
-        
+            var data = await response.json();
+
             if (response.ok) {
-              var data = await response.json();
               if (data.token == null){
                 alert('Registered successfully with Google');
                 window.location.href = "createpasswordgoogle.html";
               }else{
+
+                localStorage.setItem('jwtToken', data.token);
+                localStorage.setItem('userID', data.userID);
+                localStorage.setItem("NameForChat",data.userName);
+                debugger;
+                clearCartFromLocalStorage(data.userID);
+
                 window.history.back();
               }
 
@@ -79,4 +87,31 @@ if (googleLogin) {
     });
 } else {
     console.error("Login button not found");
+}
+
+
+async function clearCartFromLocalStorage(userID){
+  debugger;
+  var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  
+  cartItems.forEach(async element => {
+      debugger;
+      var requist = await fetch('https://localhost:7000/api/Cart/CreateNewCartItem', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              productId: element.productId,
+              userId: userID,
+              quantity: element.quantity
+  
+          })
+      });
+      
+  });
+
+  localStorage.removeItem('cart');
+
+
 }

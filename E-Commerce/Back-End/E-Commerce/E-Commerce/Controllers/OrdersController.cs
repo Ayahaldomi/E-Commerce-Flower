@@ -1,4 +1,5 @@
 ﻿using E_Commerce.Dto;
+using E_Commerce.Dto_Esraa;
 using E_Commerce.DTOs;
 using E_Commerce.Models;
 using Microsoft.AspNetCore.Http;
@@ -95,7 +96,6 @@ namespace E_Commerce.Controllers
 
             return Ok(orders);
         }
-      
 
 
 
@@ -178,6 +178,32 @@ namespace E_Commerce.Controllers
 
             return Ok(order);
         }
+
+
+
+
+        [HttpPut]
+        [Route("UpdateOrderStatus/{orderId}")]
+        public IActionResult UpdateOrderStatus(int orderId, [FromBody] UpdateOrderStatusDto updateOrderStatusDto)
+        {
+            // Find the order by ID
+            var order = _db.Orders.FirstOrDefault(o => o.OrderId == orderId);
+
+            if (order == null)
+            {
+                return NotFound(new { message = "Order not found." });
+            }
+
+            // Update the status
+            order.Status = updateOrderStatusDto.Status;
+
+            // Save changes to the database
+            _db.SaveChanges();
+
+            return Ok(new { message = "Order status updated successfully.", orderId = orderId, newStatus = updateOrderStatusDto.Status });
+        }
+
+
 
 
         [HttpGet]

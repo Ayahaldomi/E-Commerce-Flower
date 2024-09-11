@@ -7,14 +7,17 @@ async function Categories() {
     responce.forEach(element => {
 
         Categories.innerHTML += `
-
-            <div class="col-lg-3 col-sm-6">
-                <div class="ltn__banner-item">
-                    <div class="ltn__banner-img">
-                        <a href="#" onclick="catigoryID(${element.categoryId})" ><img src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="Banner Image" ></a>
-                    </div>
-                </div>
-            </div>
+<div class="col-lg-3 col-sm-6">
+    <div class="ltn__banner-item">
+        <div class="ltn__banner-img">
+            <a href="#" onclick="catigoryID(${element.categoryId})">
+                <img src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="Banner Image">
+            </a>
+        </div>
+        <!-- Add the category name here -->
+        <a href="#" onclick="catigoryID(${element.categoryId})">${element.name}</a>
+    </div>
+</div>
         `
         
     });
@@ -47,7 +50,7 @@ async function NewArrival() {
             <div class="col-12">
                 <div class="ltn__product-item ltn__product-item-4">
                     <div class="product-img">
-                        <a href="#" onclick="storeproductid(${element.productId})"><img style="height: 350px; object-fit: cover;" src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="#"></a>
+                        <a href="#" onclick="storeproductid(${element.productId})"><img style="height: 350px; object-fit: cover; width: 300px" src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="#"></a>
                         
                         <div class="product-badge">
                             <ul>
@@ -140,7 +143,7 @@ async function TopSales() {
             <div class="col-12">
                 <div class="ltn__product-item ltn__product-item-4">
                     <div class="product-img">
-                        <a href="#" onclick="storeproductid(${element.productId})"><img style="height: 350px; object-fit: cover;" src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="#"></a>
+                        <a href="#" onclick="storeproductid(${element.productId})"><img style="height: 350px; object-fit: cover; width: 300px" src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="#"></a>
                         
                         <div class="product-badge">
                             <ul>
@@ -232,7 +235,7 @@ async function OffSale() {
             <div class="col-12">
                 <div class="ltn__product-item ltn__product-item-4">
                     <div class="product-img">
-                        <a href="#" onclick="storeproductid(${element.productId})"><img style="height: 350px; object-fit: cover;" src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="#"></a>
+                        <a href="#" onclick="storeproductid(${element.productId})"><img style="height: 350px; object-fit: cover; width: 300px" src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="#"></a>
                         <div class="product-badge">
                             <ul>
                                 <li class="badge-2">${element.priceWithDiscount != null ? 
@@ -327,7 +330,7 @@ async function TopProducts() {
         <div class="col-12">
                     <div class="ltn__product-item ltn__product-item-4">
                         <div class="product-img">
-                            <a href="" onclick="storeproductid(${element.productId})"><img style="height: 350px; object-fit: cover;" src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="#"></a>
+                            <a href="" onclick="storeproductid(${element.productId})"><img style="height: 350px; object-fit: cover; width: 300px" src="../../../Back-End/E-Commerce/E-Commerce/Images/${element.image}" alt="#"></a>
                             <div class="product-badge">
                                <ul>
                                 <li class="badge-2">${element.priceWithDiscount != null ? 

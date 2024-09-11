@@ -15,7 +15,7 @@ async function submitform(){
     var data = requist;
 
     Swal.fire({
-        position: "top-end",
+        position: "top-center",
         icon: "success",
         title: "Thank You For Conntacting Us We Will Answer You Shortly",
         showConfirmButton: false,

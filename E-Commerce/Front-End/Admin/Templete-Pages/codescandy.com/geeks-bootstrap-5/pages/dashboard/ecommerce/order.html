@@ -71,7 +71,7 @@
                     <!-- Nav item User -->
 
                     <li class="nav-item">
-                        <a class="nav-link " href="#">
+                        <a class="nav-link " href="Users.html">
                             <i class="fas fa-user" style="font-size:24px"></i>
                             </i> User
                         </a>
@@ -529,38 +529,7 @@
 
                                 </ul>
                             </div>
-                            <div class="p-4 row gx-3">
-                                <!-- Form -->
-                                <div class="col-12 col-lg-6 mb-3 mb-lg-0">
-                                    <!-- search -->
-                                    <form class="d-flex align-items-center">
-                                        <span class="position-absolute ps-3 search-icon">
-                                            <i class="fe fe-search"></i>
-                                        </span>
-                                        <!-- input -->
-                                        <input type="search" class="form-control ps-6"
-                                            placeholder="Search for order ID, customer name, order status ...">
-                                    </form>
-                                </div>
-                                <div class="col-6 col-lg-3">
-                                    <!-- form select -->
-                                    <select class="form-select">
-                                        <option selected>All</option>
-                                        <option value="1">Shipped</option>
-                                        <option value="2">Cancelled</option>
-                                        <option value="3">Return</option>
-                                    </select>
-                                </div>
-                                <div class="col-6 col-lg-3">
-                                    <!-- form select -->
-                                    <select class="form-select">
-                                        <option selected>Status</option>
-                                        <option value="1">Shipped</option>
-                                        <option value="2">Cancelled</option>
-                                        <option value="3">Processing</option>
-                                    </select>
-                                </div>
-                            </div>
+                           
                             <div>
                                 <div class="tab-content" id="tabContent">
                                     <!-- Tab -->
@@ -672,21 +641,7 @@ ${order.date}
   </td>
  
   <td>
-    <span class="dropdown dropstart">
-      <a class="btn-icon btn btn-ghost btn-sm rounded-circle" href="#" role="button"
-        id="orderDropdownOne" data-bs-toggle="dropdown" data-bs-offset="-20,20"
-        aria-expanded="false">
-        <i class="fe fe-more-vertical"></i>
-      </a>
-      <span class="dropdown-menu" aria-labelledby="orderDropdownOne">
-        <span class="dropdown-header">Settings</span>
-        <a class="dropdown-item" href="#"><i
-            class="fe fe-edit dropdown-item-icon"></i>Edit</a>
-        <a class="dropdown-item" href="#"><i
-            class="fe fe-mail dropdown-item-icon"></i>Invite</a>
-
-        <a class="dropdown-item" href="#"><i
-            class="fe fe-trash dropdown-item-icon"></i>Delete</a>
+   
             <a class="dropdown-item" href="order-single.html" onclick="storeOrderId(${order.orderId})">
     <i class="fe fe-eye dropdown-item-icon"></i>Details
 </a>
@@ -703,21 +658,27 @@ ${order.date}
             }
         }
 
-        // Helper function to assign badge class based on order status
         function getPaymentBadgeClass(status) {
-            switch (status.toLowerCase()) {
-                case 'completed':
-                    return 'text-success bg-light-success';  // Completed orders
-                case 'pending':
-                    return 'text-warning bg-light-warning';  // Pending orders
-                case 'shipped':
-                    return 'text-info bg-light-info';        // Shipped orders
-                case 'cancelled':
-                    return 'text-danger bg-light-danger';    // Cancelled orders
-                default:
-                    return 'text-secondary bg-light-secondary'; // Default status
-            }
-        }
+    // Check if status is undefined or null, and handle it
+    if (!status) {
+        return 'text-secondary bg-light-secondary';  // Return a default badge class if status is missing
+    }
+
+    switch (status.toLowerCase()) {
+        case 'processing':
+            return 'text-primary bg-light-primary';  // Processing orders
+        case 'shipped':
+            return 'text-info bg-light-info';        // Shipped orders
+        case 'delivered':
+            return 'text-success bg-light-success';  // Delivered orders
+        case 'canceled':
+            return 'text-danger bg-light-danger';    // Canceled orders
+        default:
+            return 'text-secondary bg-light-secondary'; // Default status
+    }
+}
+
+
 
         // Call the getData function when the page loads
         getData();

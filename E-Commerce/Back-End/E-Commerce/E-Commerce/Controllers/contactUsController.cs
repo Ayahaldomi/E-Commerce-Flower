@@ -76,7 +76,7 @@ namespace E_Commerce.Controllers
 
             try
             {
-                string fromEmail = "ayahaldomi@gmail.com";
+                string fromEmail = data.Email;
                 string fromName = "test";
                 string subjectText = "subject";
                 string messageText = $@"
@@ -88,7 +88,7 @@ namespace E_Commerce.Controllers
                         <p>With best regards,<br>Admin</p>
                     </body>
                     </html>";
-                string toEmail = "election2024jordan@gmail.com";
+                string toEmail = data.Email;
                 string smtpServer = "smtp.gmail.com";
                 int smtpPort = 465; // Port 465 for SSL
 
