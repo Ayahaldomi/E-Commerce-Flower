@@ -23,6 +23,11 @@ namespace E_Commerce.Controllers
             return Ok(categories);
 
         }
+        [HttpGet("getCategoryById/{id}")]
+        public IActionResult GetCategory(int id) { 
+            var cat = _db.Categories.Find(id);
+            return Ok(cat);
+        }
         [HttpPost]
         public IActionResult CreateCategory([FromForm] DTOsCategoryBassam dto)
         {

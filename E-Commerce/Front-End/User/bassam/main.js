@@ -58,7 +58,7 @@ if (googleLogin) {
                 debugger;
                 clearCartFromLocalStorage(data.userID);
 
-                window.history.back();
+                window.location.href = "../FawarehWork/cart.html"; 
               }
 
             } else {

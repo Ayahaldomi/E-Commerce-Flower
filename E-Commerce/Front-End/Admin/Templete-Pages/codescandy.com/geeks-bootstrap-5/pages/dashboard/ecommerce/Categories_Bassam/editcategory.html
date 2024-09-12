@@ -545,13 +545,19 @@
                     <!-- input -->
                   <div class="mb-3">
                     <label class="form-label">Category Title</label>
-                    <input type="text" class="form-control" placeholder="Enter Category Title" name="name" required>
+                    <input type="text" class="form-control" placeholder="Enter Category Title" name="name" required id="name">
                   </div>
                     <!-- input -->
                   <div>
                     <label class="form-label">Category Description</label>
 
-                        <input type="text" class="form-control" placeholder="Enter category description" name="description" required>
+                        <input type="text" class="form-control" placeholder="Enter category description" name="description" required id="description">
+<br>
+                        <h4 class="mb-4">Category Gallery</h4>
+                        <h5 class="mb-1">Category Image</h5>
+                        <p>Add Category main Image.</p>
+                          <!-- input -->
+                        <input type="file" class="form-control" name="image">
                   </div>
                 </div>
               </div>
@@ -559,20 +565,10 @@
               <!-- card -->
             <div class="card mb-4">
                 <!-- card body -->
-              <div class="card-body">
                 <div>
-                  <div class="mb-4">
-                      <!-- heading -->
-                    <h4 class="mb-4">Category Gallery</h4>
-                    <h5 class="mb-1">Category Image</h5>
-                    <p>Add Category main Image.</p>
-                      <!-- input -->
-                    <input type="file" class="form-control" name="image">
-                  </div>
-
+                
  
 
-                  </div>
                 </div>
               </div>
             </div>
@@ -580,8 +576,9 @@
 
           <div class="d-grid">
             <button href="#" class="btn btn-primary" type="submit">
-              Edit Product
+              Edit Category
             </button>
+            
         </form>
           </div>
 

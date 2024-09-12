@@ -11,8 +11,8 @@ async function CreatePassword(event) {
 
     var form = document.getElementById("passwordForm");
     var formData = new FormData();
-    var password1 = document.getElementById("password1").value;
-    var password2 = document.getElementById("password2").value;
+    var password1 = document.getElementById("new_password").value;
+    var password2 = document.getElementById("confirm_password").value;
     formData.append('displayName', data.displayName);
     if (password1 !== password2) {
         alert("Passwords do not match");
@@ -32,9 +32,8 @@ async function CreatePassword(event) {
 
 
         if (response.ok) {
-            window.location.href = "../Home/index.html";
              clearCartFromLocalStorage(dataUser.userID);
-
+             window.location.href = "../FawarehWork/cart.html"; 
             alert('Password changed successfully');
         } else {
             const errorData = await response.json();

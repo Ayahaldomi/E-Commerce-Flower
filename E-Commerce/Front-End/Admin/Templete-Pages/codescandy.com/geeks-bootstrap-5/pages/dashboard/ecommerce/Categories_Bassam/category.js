@@ -8,14 +8,9 @@ async function Categories() {
     
     data.forEach(element => {
         rowHTML += `<tr>
+                       
                         <td>
-                          <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="productOne">
-                            <label class="form-check-label" for="productOne"></label>
-                            <input type="hidden" id="hidden" class="product-id" value="${element.category_id}">
-                          </div>
-                        </td>
-                        <td>
+                          <input type="hidden" id="hidden" class="product-id" value="${element.category_id}">
                           <a href="#" class="text-inherit">
                             <div class="d-flex align-items-center">
                               <div>
@@ -33,7 +28,7 @@ async function Categories() {
                         <td>
                           <span class="badge bg-success badge-dot me-1"></span>Active
                         </td>
-                        <td>
+                        <td >
                           ${element.description}
                         </td>
                         <td>
@@ -45,8 +40,8 @@ async function Categories() {
                             </a>
                             <span class="dropdown-menu" aria-labelledby="productDropdown1">
                               <span class="dropdown-header">Settings</span>
-                              <a class="dropdown-item" href="editcategory.html"><i
-                                  class="fe fe-edit dropdown-item-icon" onclick="navigateEdit(${element.category_id})"></i>Edit</a>
+                              <a class="dropdown-item" href="#" onclick="navigateEdit(${element.categoryId})"><i
+                                  class="fe fe-edit dropdown-item-icon" ></i>Edit</a>
                               <button class="dropdown-item" onclick="Delete(${element.categoryId})"><i
                                   class="fe fe-trash dropdown-item-icon"></i>Delete</button>
                             </span>

@@ -66,7 +66,14 @@
   #Messages::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-  }</style>
+  }
+  .card {
+    height: 94%;
+}
+.bg-white.py-3.px-4 {
+    height: 178px;
+}
+  </style>
 
 </head>
 
@@ -589,10 +596,12 @@
         <!-- Message Input Section -->
         <div class="bg-white py-3 px-4" style="position: sticky; bottom: 0; width: 100%;">
           <div class="form-outline">
-            <textarea class="form-control bg-body-tertiary" id="textAreaExample2" rows="2"></textarea>
             <label class="form-label" for="textAreaExample2">Message</label>
+
+            <textarea class="form-control bg-body-tertiary" id="textAreaExample2" rows="2"></textarea>
+            <button onclick="sendMessage('roomName')" type="button" class="btn btn-info btn-rounded float-end mt-2">Send</button>
+
           </div>
-          <button onclick="sendMessage('roomName')" type="button" class="btn btn-info btn-rounded float-end mt-2">Send</button>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ async function login(event) {
             localStorage.setItem('userID', result.userID);
             localStorage.setItem("NameForChat",result.userName);
             clearCartFromLocalStorage(result.userID);
-            window.history.back();
+            window.location.href = "../FawarehWork/cart.html"; 
         } else {
             const errorData = await response.json();
             alert('Error: ' + (errorData.message || 'Email or password is incorrect'));
