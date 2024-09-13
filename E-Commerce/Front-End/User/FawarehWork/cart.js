@@ -231,6 +231,7 @@ function GetCartItemslocal(){
 } 
 
 function changeQuantityLocal(productId, currentQuantity, action) {
+    debugger;
     var existingCart = localStorage.getItem("cart");
     var cart = JSON.parse(existingCart);
 
@@ -238,17 +239,24 @@ function changeQuantityLocal(productId, currentQuantity, action) {
     const itemIndex = cart.findIndex(item => item.productId === productId);
 
     if (itemIndex !== -1) {
+        if (!Number.isInteger(cart[itemIndex].quantity)) {
+            var q = Number(cart[itemIndex].quantity);
+             // Updating the original quantity
+        }else {
+            var q = cart[itemIndex].quantity;
+        }
         // Update the quantity based on the action
         if (action === 'inc') {
-            cart[itemIndex].quantity += 1; // Increment quantity
+            q += 1; // Increment quantity
         } else if (action === 'dec') {
-            cart[itemIndex].quantity -= 1; // Decrement quantity
+            q -= 1; // Decrement quantity
             
             // Remove item if quantity reaches 0
             if (cart[itemIndex].quantity === 0) {
                 cart.splice(itemIndex, 1); // Remove item from cart
             }
         }
+        cart[itemIndex].quantity = q; 
 
         // Save the updated cart back to localStorage
         localStorage.setItem("cart", JSON.stringify(cart));

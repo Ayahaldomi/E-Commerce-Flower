@@ -32,7 +32,8 @@ async function CreatePassword(event) {
 
 
         if (response.ok) {
-             clearCartFromLocalStorage(dataUser.userID);
+            debugger;
+             clearCartFromLocalStorage(dataUser.userId);
              window.location.href = "../FawarehWork/cart.html"; 
             alert('Password changed successfully');
         } else {
